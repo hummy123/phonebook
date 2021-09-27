@@ -10,17 +10,23 @@ The "frontend" folder contains the React app for the phonebook.
 The "backend" folder contains the Node server. 
 The folder "arcane-reaches-66730" contains the Git repository deployed to Heroku.
 
-## Relevant scripts
+## CI/CD scripts
 
-- npm run copyfront
-   - generates a production build of the front-end and copies it to arcane-reaches-66730
-- npm run copyback 
-  - copies the back-end to arcane-reaches-66730
+The following commands should be executed from the backend folder.
 
-- MSG="commit message here" npm run deploy
-   - adds untracked files to Git, commits with MSG and deploys to Heroku.
-     - MSG does not support spaces in the commit message.
+- To generate a production build of the front-end and copy it to the deployment folder
+  - ```npm run copyfront```
 
-- MSG="commit message here" npm run deployfull
-  - executes all the above in the listed order.
-      - MSG does not support spaces in the commit message.
+- To copy the backend folder to the to_deploy folder
+  - ```npm run copyback``` 
+
+- To execute the above two commands at once
+  - ```npm run copyfull```
+
+- To add untracked files to the to_deploy folder and commit them
+  - ```npm run deploy "your message here"```
+
+- To push commit to Heroku
+  - ```npm run deploy```
+
+You must initialise a Heroku repository in the to_deploy folder before running the last two commands. 
