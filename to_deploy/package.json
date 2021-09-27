@@ -12,7 +12,6 @@
     "copyfull": "npm run copyfront && npm run copyback",
     "commit": "func() { cd ../to_deploy && git add . && git commit -m \"$1\"; }; func",
     "deploy": "cd ../to_deploy && git push heroku",
-    "deployfull": "func() { npm run copyfull && git add . && git commit -m \"$1\"; }; func",
     "lint": "eslint . --ext=mjs,js"
   },
   "author": "",
